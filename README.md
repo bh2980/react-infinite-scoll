@@ -32,4 +32,7 @@ import InfiniteScroll from './InfiniteScroll';
   ```
 * end(Required) : boolean, state of no more loading
 * spinner : ReactElement, spinner at loading time
+  
+## Post
+https://bh2980.tistory.com/157
 
