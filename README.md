@@ -15,10 +15,11 @@ InfiniteScroll.jsx 파일을 프로젝트에 포함.
 ```javascript
 import InfiniteScroll from './InfiniteScroll';
 
-<InfiniteScroll itemList={itemList} addItemList={addItemList} spinner={spinner} />
+<InfiniteScroll itemList={itemList} addItemList={addItemList} end={end} spinner={spinner} />
 ```
 
-* itemList : 아이템 배열(필수)
-* addItemList : 아이템 갱신 함수(필수)
-* spinner : Loading 시 보여질 Spinner
+* itemList : reactElement[] (필수)
+* addItemList : item add function to itemList (필수)
+* end : state of no more loading
+* spinner : spinner at loading time
 
