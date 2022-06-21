@@ -12,6 +12,7 @@ function App() {
     <Block text="4" />,
     <Block text="5" />,
   ]);
+  const [end, setEnd] = useState(false);
 
   const addItemList = async () => {
     await new Promise((resolve) => setTimeout(resolve, 1500));
@@ -24,6 +25,8 @@ function App() {
       <Block text={count * 5 + 4} />,
       <Block text={count * 5 + 5} />,
     ]);
+
+    if (count > 10) setEnd(true);
   };
 
   return (
@@ -32,6 +35,7 @@ function App() {
         itemList={itemList}
         addItemList={addItemList}
         spinner={<Oval width="100%" height="80px" />}
+        end={end}
       />
     </div>
   );

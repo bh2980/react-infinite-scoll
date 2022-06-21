@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const InfiniteScroll = ({ itemList, addItemList, spinner }) => {
+const InfiniteScroll = ({ itemList, addItemList, end, spinner }) => {
   const [target, setTarget] = useState(null);
   const [loading, setLoading] = useState(false);
 
@@ -38,7 +38,7 @@ const InfiniteScroll = ({ itemList, addItemList, spinner }) => {
         return <Item key={index} />;
       })}
       {loading && <Spinner />}
-      {!loading && <div style={targetStyle} ref={setTarget}></div>}
+      {!end && !loading && <div style={targetStyle} ref={setTarget}></div>}
     </>
   );
 };
