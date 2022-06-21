@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import InfiniteScroll from "./InfiniteScroll/InfiniteScroll";
 import Block from "./components/Block";
 import { Oval } from "react-loader-spinner";
@@ -12,10 +12,6 @@ function App() {
     <Block text="4" />,
     <Block text="5" />,
   ]);
-
-  useEffect(() => {
-    console.log(itemList);
-  }, [itemList]);
 
   const addItemList = async () => {
     await new Promise((resolve) => setTimeout(resolve, 1500));
@@ -32,7 +28,11 @@ function App() {
 
   return (
     <div className="App">
-      <InfiniteScroll itemList={itemList} addItemList={addItemList} />
+      <InfiniteScroll
+        itemList={itemList}
+        addItemList={addItemList}
+        spinner={<Oval width="100%" height="80px" />}
+      />
     </div>
   );
 }
