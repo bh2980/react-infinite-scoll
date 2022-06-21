@@ -12,9 +12,13 @@
 
 InfiniteScroll.jsx 파일을 프로젝트에 포함.
 
-```HTML
+```javascript
+import InfiniteScroll from './InfiniteScroll';
+
 <InfiniteScroll itemList={itemList} addItemList={addItemList} spinner={spinner} />
 ```
+
 * itemList : 아이템 배열(필수)
 * addItemList : 아이템 갱신 함수(필수)
 * spinner : Loading 시 보여질 Spinner
+
