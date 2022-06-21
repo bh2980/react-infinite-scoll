@@ -27,6 +27,8 @@ const InfiniteScroll = ({ itemList, addItemList, end, spinner }) => {
     if (!target) return;
 
     observer.observe(target);
+
+    return () => observer && observer.disconnect();
   }, [target]);
 
   return (
