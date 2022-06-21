@@ -18,8 +18,8 @@ import InfiniteScroll from './InfiniteScroll';
 <InfiniteScroll itemList={itemList} addItemList={addItemList} end={end} spinner={spinner} />
 ```
 
-* itemList : reactElement[] (필수)
+* itemList : ReactElement[] (필수)
 * addItemList : item add function to itemList (필수)
 * end : state of no more loading (필수)
-* spinner : spinner at loading time
+* spinner : ReactElement, spinner at loading time
 
