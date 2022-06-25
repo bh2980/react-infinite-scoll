@@ -18,8 +18,14 @@ import InfiniteScroll from './InfiniteScroll';
 <InfiniteScroll itemList={itemList} addItemList={addItemList} end={end} spinner={spinner} />
 ```
 
-* itemList(Required) : ReactElement[] 
-* addItemList(Required) : () => Promise<void>, item add function to itemList
+|Parameter|Type|Required|
+|---|---|-|
+|itemList|ReactElement[]|O|
+|addItemList|() => Promise<void>|O|
+|end|boolean|O|
+|spinner|ReactElement|X|
+  
+* Example of addItemList function
   
   ```javascript
   const addItemList = async () => {
@@ -30,8 +36,6 @@ import InfiniteScroll from './InfiniteScroll';
     ]);
   };
   ```
-* end(Required) : boolean, state of no more loading
-* spinner : ReactElement, spinner at loading time
   
 ## Post
 https://bh2980.tistory.com/157
