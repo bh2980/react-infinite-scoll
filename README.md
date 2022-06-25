@@ -30,6 +30,9 @@ import InfiniteScroll from './InfiniteScroll';
   ```javascript
   const addItemList = async () => {
     const newItem = await getItem();
+  
+    if(!newItem) return;
+  
     setItemList((itemList) => [
       ...itemList,
       ...newItem
